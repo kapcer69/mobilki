@@ -7,4 +7,11 @@ export default defineNuxtConfig({
     "@": resolve(__dirname, "/"),
   },
   css: ["~/assets/main.scss"],
+  modules: ["nuxt-icon", "@nuxtjs/google-fonts"],
+  googleFonts: {
+    families: {
+      Roboto: true,
+      Inter: [400, 500, 700],
+    },
+  },
 });
