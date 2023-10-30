@@ -1,3 +1,5 @@
+@import "./variables";
+
 *,
 *::before,
 *::after {
@@ -35,4 +37,16 @@ h4,
 h5,
 h6 {
   overflow-wrap: break-word;
+}
+
+.title {
+  padding: 2rem;
+}
+
+.color:nth-child(odd) {
+  background-color: $secondary;
+}
+
+.color:last-child {
+  border-bottom: 1px solid $accent;
 }

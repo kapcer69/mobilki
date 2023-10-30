@@ -1,9 +1,13 @@
+<script>
+import "~/assets/css/Announcement.scss";
+</script>
+
 <template>
   <div class="announcement">
-    <div class="announcement-date">25 września</div>
+    <p class="announcement-date">25 września</p>
     <div class="announcement-content">
-      <p class="text">Godziny rektorskie</p>
-      <p class="category">Ważne komunikaty</p>
+      <p>Godziny rektorskie</p>
+      <small class="category">Ważne komunikaty</small>
     </div>
   </div>
 </template>

@@ -1,0 +1,20 @@
+@import "./variables";
+
+.announcement {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+
+  &-date {
+    padding: 0 4rem;
+  }
+
+  &-content {
+    border-left: 1px solid $accent;
+    padding: 1rem;
+  }
+}
+
+.category {
+  color: rgba(0, 0, 0, 0.5);
+}
