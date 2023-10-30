@@ -46,22 +46,22 @@ h6 {
   padding: 2rem;
 }
 
-.add {
-  border-radius: 50%;
-  aspect-ratio: 1 / 1;
+.btn {
   border: 0;
   background-color: #fff;
   cursor: pointer;
-
-  &-icon {
-    font-size: 50px;
-    min-width: 50px;
-  }
+  border-radius: 50%;
+  aspect-ratio: 1 / 1;
 
   &:hover,
   &:focus-visible {
     background-color: #cacaca;
   }
+}
+
+.icon {
+  font-size: 50px;
+  min-width: 50px;
 }
 
 .color:nth-child(odd) {
