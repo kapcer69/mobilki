@@ -1,9 +1,9 @@
 <script>
-import "~/assets/css/Header.scss";
+import "../assets/css/login.scss";
 </script>
 
 <template>
-  <header class="header">
+  <div class="content">
     <picture>
       <source
         media="(max-width:650px)"
@@ -11,9 +11,10 @@ import "~/assets/css/Header.scss";
       />
       <img src="~/assets/images/layout_set_logo.png" alt="Logo" />
     </picture>
-    <button class="account-btn">
-      <p class="account-btn-user">Admin</p>
-      <Icon class="icon" name="material-symbols:account-circle" />
-    </button>
-  </header>
+    <form class="login-form">
+      <input type="text" name="" id="" />
+      <input type="password" name="" id="" />
+      <button class="btn-login">Zaloguj się</button>
+    </form>
+  </div>
 </template>

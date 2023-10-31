@@ -11,10 +11,10 @@ import "~/assets/css/Announcement.scss";
     </div>
     <div class="announcement-actions">
       <button class="btn btn-actions" title="Edytuj ogłoszenie">
-        <Icon class="icon-actions" name="material-symbols:edit" />
+        <Icon class="icon" name="material-symbols:edit" />
       </button>
       <button class="btn btn-actions" title="Usuń ogłoszenie">
-        <Icon class="icon-actions" name="material-symbols:close" />
+        <Icon class="icon" name="material-symbols:close" />
       </button>
     </div>
   </div>
