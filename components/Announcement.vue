@@ -52,4 +52,16 @@
   min-width: 20px;
   max-width: 40px;
 }
+
+@media (max-width: 580px) {
+  .announcement-date {
+    padding: 0 2rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .announcement-date {
+    padding: 0 1rem;
+  }
+}
 </style>
