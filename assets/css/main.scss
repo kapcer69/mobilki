@@ -36,3 +36,20 @@ h5,
 h6 {
   overflow-wrap: break-word;
 }
+
+.btn-round {
+  border: 0;
+  background-color: rgb(255, 255, 255);
+  cursor: pointer;
+  border-radius: 50%;
+  aspect-ratio: 1 / 1;
+
+  &:hover,
+  &:focus-visible {
+    background-color: rgba(202, 202, 202, 0.5);
+  }
+}
+
+.logo {
+  min-width: 400px;
+}

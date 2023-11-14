@@ -3,7 +3,7 @@
     <Header />
     <div class="content-header">
       <h1 class="title">Ogłoszenia</h1>
-      <button class="btn" title="Dodaj ogłoszenie">
+      <button class="btn-round" title="Dodaj ogłoszenie">
         <Icon class="icon" name="material-symbols:add" />
       </button>
     </div>
@@ -24,22 +24,10 @@
   padding: 2rem;
 }
 
-.btn {
-  border: 0;
-  background-color: #fff;
-  cursor: pointer;
-  border-radius: 50%;
-  aspect-ratio: 1 / 1;
-
-  &:hover,
-  &:focus-visible {
-    background-color: #cacaca;
-  }
-}
-
 .icon {
   font-size: 50px;
-  min-width: 40px;
+  min-width: 20px;
+  max-width: 40px;
 }
 
 .color:nth-child(odd) {

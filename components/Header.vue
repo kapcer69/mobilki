@@ -1,6 +1,6 @@
 <template>
   <header class="header">
-    <picture>
+    <picture class="logo">
       <source
         media="(max-width:650px)"
         srcset="../assets/images/layout_set_logo-mobile.png"
@@ -8,7 +8,7 @@
       <img src="~/assets/images/layout_set_logo.png" alt="Logo" />
     </picture>
     <button class="account-btn">
-      <p class="account-btn-user">Admin</p>
+      Admin
       <Icon class="icon" name="material-symbols:account-circle" />
     </button>
   </header>
@@ -17,7 +17,7 @@
 <style lang="scss">
 .header {
   display: flex;
-  padding: 3rem 5rem;
+  padding: 3rem 3rem;
   justify-content: space-between;
   align-items: center;
 }
@@ -31,15 +31,22 @@
   border: 0;
   background-color: #fff;
   cursor: pointer;
-
-  &-user {
-    font-size: 1.5rem;
-    font-weight: 700;
-  }
+  font-size: 1.5rem;
+  font-weight: 700;
 
   &:hover,
   &:focus-visible {
     background-color: #cacaca;
+  }
+}
+
+@media (max-width: 650px) {
+  .header {
+    gap: 2rem;
+  }
+
+  .logo {
+    min-width: 100px;
   }
 }
 </style>
