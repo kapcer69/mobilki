@@ -1,7 +1,3 @@
-<script>
-import "~/assets/css/Announcement.scss";
-</script>
-
 <template>
   <div class="announcement">
     <p class="announcement-date">25 września</p>
@@ -19,3 +15,41 @@ import "~/assets/css/Announcement.scss";
     </div>
   </div>
 </template>
+
+<style lang="scss">
+@import "../assets/css/variables";
+
+.announcement {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+
+  &-date {
+    padding: 0 4rem;
+  }
+
+  &-content {
+    border-left: 1px solid $accent;
+    padding: 1rem;
+  }
+
+  &-actions {
+    display: flex;
+    margin-left: auto;
+    margin-right: 1rem;
+  }
+}
+
+.category {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.btn-actions {
+  background-color: inherit;
+}
+
+.icon-actions {
+  min-width: 20px;
+  max-width: 40px;
+}
+</style>
