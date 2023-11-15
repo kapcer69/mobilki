@@ -1,10 +1,12 @@
 <template>
   <Header />
   <div class="content">
-    <h2>Dodaj/edytuj</h2>
+    <h2 class="title">Dodaj/edytuj</h2>
     <form class="edit">
-      <label for="date">Wybierz datę:</label>
-      <input type="date" name="date" id="date" class="input" />
+      <div class="edit-group">
+        <label for="date">Wybierz datę:</label>
+        <input type="date" name="date" id="date" class="input" />
+      </div>
       <select name="category" id="category" class="input">
         <option value="">Wybierz kategorię</option>
         <option value="wazne">Ważne komunikaty</option>
@@ -26,11 +28,21 @@
   padding: 3rem;
 }
 
+.title {
+  margin-bottom: 2rem;
+}
+
 .edit {
   display: flex;
   flex-direction: column;
   gap: 2rem;
   max-width: 50%;
+
+  &-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
 }
 
 .btn {
