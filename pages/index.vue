@@ -2,7 +2,7 @@
   <main>
     <Header />
     <div class="content-header">
-      <h1 class="title">Ogłoszenia</h1>
+      <h1>Ogłoszenia</h1>
       <button class="btn-round" title="Dodaj ogłoszenie">
         <Icon class="icon" name="material-symbols:add" />
       </button>
@@ -14,7 +14,7 @@
   </main>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import "../assets/css/variables";
 
 .content-header {
@@ -22,12 +22,6 @@
   justify-content: space-between;
   align-items: center;
   padding: 2rem;
-}
-
-.icon {
-  font-size: 50px;
-  min-width: 20px;
-  max-width: 40px;
 }
 
 .color:nth-child(odd) {

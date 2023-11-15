@@ -14,10 +14,10 @@
   </header>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .header {
   display: flex;
-  padding: 3rem 3rem;
+  padding: 3rem;
   justify-content: space-between;
   align-items: center;
 }

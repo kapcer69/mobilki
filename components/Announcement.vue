@@ -16,7 +16,7 @@
   </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import "../assets/css/variables";
 
 .announcement {
@@ -46,11 +46,11 @@
 
 .btn-actions {
   background-color: inherit;
-}
 
-.icon-actions {
-  min-width: 20px;
-  max-width: 40px;
+  &:hover,
+  &:focus-visible {
+    background-color: rgba(202, 202, 202, 0.5);
+  }
 }
 
 @media (max-width: 580px) {

@@ -1,3 +1,5 @@
+@import "./variables";
+
 *,
 *::before,
 *::after {
@@ -37,6 +39,29 @@ h6 {
   overflow-wrap: break-word;
 }
 
+.btn {
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+  border: 0;
+  background-color: $primary;
+  color: white;
+  cursor: pointer;
+
+  &:hover,
+  &:focus-visible {
+    background-color: rgba(6, 118, 204, 0.8);
+  }
+}
+
+.btn-secondary {
+  background-color: $accent;
+
+  &:hover,
+  &:focus-visible {
+    background-color: rgba(175, 197, 213, 0.8);
+  }
+}
+
 .btn-round {
   border: 0;
   background-color: rgb(255, 255, 255);
@@ -50,6 +75,18 @@ h6 {
   }
 }
 
+.input {
+  padding: 0.5rem;
+  border: 1px solid black;
+  border-radius: 0.3rem;
+}
+
 .logo {
   min-width: 400px;
+}
+
+.icon {
+  font-size: 50px;
+  min-width: 20px;
+  max-width: 40px;
 }
