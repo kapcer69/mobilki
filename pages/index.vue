@@ -1,15 +1,30 @@
+<script lang="ts">
+export default {
+  setup() {
+    const router = useRouter();
+    return { router };
+  },
+  methods: {
+    navigateTo(path: string) {
+      this.router.push(path);
+    },
+  },
+};
+</script>
+
 <template>
   <main>
     <Header />
     <div class="content-header">
       <h1>Ogłoszenia</h1>
-      <button class="btn-round" title="Dodaj ogłoszenie">
+      <button
+        class="btn-round"
+        title="Dodaj ogłoszenie"
+        @click="navigateTo('/edit')"
+      >
         <Icon class="icon" name="material-symbols:add" />
       </button>
     </div>
-    <Announcement class="color" />
-    <Announcement class="color" />
-    <Announcement class="color" />
     <Announcement class="color" />
   </main>
 </template>
