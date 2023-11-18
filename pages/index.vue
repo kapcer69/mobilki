@@ -1,15 +1,6 @@
-<script lang="ts">
-export default {
-  setup() {
-    const router = useRouter();
-    return { router };
-  },
-  methods: {
-    navigateTo(path: string) {
-      this.router.push(path);
-    },
-  },
-};
+<script lang="ts" setup>
+const { announcementArray } = useAnnouncementState();
+const router = useRouter();
 </script>
 
 <template>
@@ -20,12 +11,20 @@ export default {
       <button
         class="btn-round"
         title="Dodaj ogłoszenie"
-        @click="navigateTo('/edit')"
+        @click="router.push('edit')"
       >
         <Icon class="icon" name="material-symbols:add" />
       </button>
     </div>
-    <Announcement class="color" />
+    <Announcement
+      class="color"
+      v-for="(item, index) in announcementArray"
+      :key="item.id"
+      :id="index"
+      :date="item.date"
+      :description="item.description"
+      :category="item.category"
+    />
   </main>
 </template>
 

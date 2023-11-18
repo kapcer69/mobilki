@@ -1,33 +1,23 @@
-<script lang="ts">
-export default {
-  setup() {
-    const { announcementArray, addItem, removeItem, updateItem } =
-      useAnnouncementState();
-    const router = useRouter();
-    return { announcementArray, addItem, removeItem, updateItem, router };
-  },
-  data() {
-    return {
-      id: 0,
-      date: "",
-      category: "",
-      description: "",
-    };
-  },
-  methods: {
-    onSubmit() {
-      this.addItem({
-        id: this.id,
-        date: this.date,
-        category: this.category,
-        description: this.description,
-      });
-      this.router.push("/");
-    },
-    navigateTo(path: string) {
-      this.router.push(path);
-    },
-  },
+<script lang="ts" setup>
+const { announcementArray, addItem, removeItem, updateItem } =
+  useAnnouncementState();
+const router = useRouter();
+
+const inputRefs = ref({
+  id: announcementArray.value.length + 1,
+  date: "",
+  category: "",
+  description: "",
+});
+
+const onSubmit = () => {
+  addItem({
+    id: inputRefs.value.id,
+    date: inputRefs.value.date,
+    category: inputRefs.value.category,
+    description: inputRefs.value.description,
+  });
+  router.push("/");
 };
 </script>
 
@@ -35,28 +25,28 @@ export default {
   <Header />
   <div class="content">
     <h2 class="title">Dodaj/edytuj</h2>
-    <form class="edit" @submit.prevent="onSubmit()">
+    <form class="edit" @submit.prevent="onSubmit">
       <div class="edit-group">
         <label for="date">Wybierz datę:</label>
-        <input type="date" class="input" v-model="date" />
+        <input type="date" class="input" v-model="inputRefs.date" />
       </div>
-      <select class="input" v-model="category">
+      <select class="input" v-model="inputRefs.category">
         <option value="">Wybierz kategorię</option>
-        <option value="wazne">Ważne komunikaty</option>
-        <option value="z_zycia_szkoly">Z życia szkoły</option>
+        <option value="Ważne komunikaty">Ważne komunikaty</option>
+        <option value="Z życia szkoły">Z życia szkoły</option>
       </select>
       <input
         type="text"
         placeholder="Opis"
         class="input"
-        v-model="description"
+        v-model="inputRefs.description"
       />
 
       <div class="btn-group">
         <button
           type="button"
           class="btn btn-secondary"
-          @click="navigateTo('/')"
+          @click="router.push('/')"
         >
           Anuluj
         </button>

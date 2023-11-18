@@ -1,18 +1,18 @@
-<script lang="ts">
-export default {
-  setup() {
-    const { announcementArray } = useAnnouncementState();
-    return { announcementArray };
-  },
-};
+<script lang="ts" setup>
+const props = defineProps<{
+  id: number;
+  date: string;
+  description: string;
+  category: string;
+}>();
 </script>
 
 <template>
-  <div class="announcement" v-for="item in announcementArray" :key="item.id">
-    <p class="announcement-date">{{ item.date }}</p>
+  <div class="announcement">
+    <p class="announcement-date">{{ props.date }}</p>
     <div class="announcement-content">
-      <p>{{ item.description }}</p>
-      <small class="category">{{ item.category }}</small>
+      <p>{{ props.description }}</p>
+      <small class="category">{{ props.category }}</small>
     </div>
     <div class="announcement-actions">
       <button class="btn-round btn-actions" title="Edytuj ogłoszenie">
