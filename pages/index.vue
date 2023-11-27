@@ -19,11 +19,12 @@ const router = useRouter();
     <Announcement
       class="color"
       v-for="(item, index) in announcementArray"
-      :key="item.id"
+      :key="index"
       :id="index"
       :date="item.date"
       :description="item.description"
       :category="item.category"
+      :announcement="item"
     />
   </main>
 </template>

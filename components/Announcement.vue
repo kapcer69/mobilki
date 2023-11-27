@@ -1,10 +1,21 @@
 <script lang="ts" setup>
+import type { Announcement } from "~/interfaces/Announcement";
+
+const { removeItem, updateItem } = useAnnouncementState();
+const router = useRouter();
+
 const props = defineProps<{
   id: number;
   date: string;
   description: string;
   category: string;
+  announcement: Announcement;
 }>();
+
+const onEdit = (updatedItem: Announcement) => {
+  updateItem(updatedItem);
+  router.push({ path: "edit", query: { id: updatedItem.id } });
+};
 </script>
 
 <template>
@@ -15,10 +26,18 @@ const props = defineProps<{
       <small class="category">{{ props.category }}</small>
     </div>
     <div class="announcement-actions">
-      <button class="btn-round btn-actions" title="Edytuj ogłoszenie">
+      <button
+        class="btn-round btn-actions"
+        title="Edytuj ogłoszenie"
+        @click="onEdit(props.announcement)"
+      >
         <Icon class="icon" name="material-symbols:edit" />
       </button>
-      <button class="btn-round btn-actions" title="Usuń ogłoszenie">
+      <button
+        class="btn-round btn-actions"
+        title="Usuń ogłoszenie"
+        @click="removeItem(props.id)"
+      >
         <Icon class="icon" name="material-symbols:close" />
       </button>
     </div>

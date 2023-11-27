@@ -1,10 +1,9 @@
 <script lang="ts" setup>
-const { announcementArray, addItem, removeItem, updateItem } =
-  useAnnouncementState();
+const { addItem } = useAnnouncementState();
 const router = useRouter();
 
 const inputRefs = ref({
-  id: announcementArray.value.length + 1,
+  id: 0,
   date: "",
   category: "",
   description: "",
